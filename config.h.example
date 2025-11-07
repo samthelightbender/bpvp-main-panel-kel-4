@@ -1,0 +1,85 @@
+#include <stdint.h>
+/**
+ * Rename this file to `config.h` and fill in all the correct data.
+ */
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define TIMEZONE "CIT-8"
+
+#define BLYNK_PRINT Serial
+#define BLYNK_TEMPLATE_ID "YOUR_BLYNK_TEMPLATE_ID"
+#define BLYNK_TEMPLATE_NAME "YOUR_BLYNK_TEMPLATE_NAME"
+#define BLYNK_AUTH_TOKEN "YOUR_BLYNK_AUTH_TOKEN"
+
+#define BOTtoken "YOUR_TELEGRAM_BOT_TOKEN"
+
+/**
+ * FILL WITH REAL CHAT ID
+ */
+const int64_t CHAT_IDs[] = {
+  123456789,
+  -987654321,
+};
+
+// #define WIFI_SSID "WORKSHOP ELEKTRONICA(1)"
+// #define WIFI_PASSWORD "12345678"
+
+#define WIFI_SSID "Tselhome-2204"
+#define WIFI_PASSWORD "74229035"
+
+#define VPIN_KAPASITAS_AIR V0
+#define VPIN_SUHU_AIR V1
+#define VPIN_TDS_AIR V2
+#define VPIN_FLOWRATE_AIR V3
+#define VPIN_PH_AIR V4
+#define VPIN_POMPA_A V10
+#define VPIN_POMPA_B V11
+#define VPIN_POMPA_UP V12
+#define VPIN_POMPA_DOWN V13
+
+#define VPIN_MODE V98
+#define VPIN_REFRESH V99
+
+// --- Pin Pompa (Relay) ---
+#define PIN_POMPA_A 2         // Pompa Nutrisi A
+#define PIN_POMPA_B 15         // Pompa Nutrisi B
+#define PIN_POMPA_PH_NAIK 4   // Pompa pH Up
+#define PIN_POMPA_PH_TURUN 0 // Pompa pH Down
+
+// --- Pin LED (Indikator/Alarm) ---
+#define PIN_LED_INDIKATOR_DATA 27
+#define PIN_LED_ALARM_ALIRAN_AIR 14
+#define PIN_LED_ALARM_TDS 26
+#define PIN_LED_ALARM_KAPASITAS_AIR 25
+#define PIN_LED_ALARM_PH 33
+
+#define MIN_WATER_LEVEL 15
+#define MAX_WATER_LEVEL 100
+
+#define MIN_PH 5.5
+#define MAX_PH 6.5
+
+#define MIN_WATERFLOW 1.0
+
+#define MIN_TDS 650
+#define MAX_TDS 900
+
+// #define ALARM_ALIRAN_AIR_COOLDOWN 15000
+// #define ALARM_KAPASITAS_AIR_COOLDOWN 15000
+// #define ALARM_TDS_COOLDOWN 15000
+// #define ALARM_PH_COOLDOWN 15000
+
+#define ALARM_ALIRAN_AIR_COOLDOWN 800000
+#define ALARM_KAPASITAS_AIR_COOLDOWN 800000
+#define ALARM_TDS_COOLDOWN 1800000
+#define ALARM_PH_COOLDOWN 3600000
+
+#define SENSOR_ACTIVITY_TIMEOUT 300000
+
+#define DURASI_POMPA_A 5000
+#define DURASI_POMPA_B 5000
+#define DURASI_POMPA_PH_NAIK 5000
+#define DURASI_POMPA_PH_TURUN 5000
+
+#endif // CONFIG_H
